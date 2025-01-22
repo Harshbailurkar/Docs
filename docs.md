@@ -9,7 +9,7 @@
 
 ### LinkMaster Endpoints
 
-#### POST /api/v1/linkmaster
+#### `POST` /api/v1/linkmaster
 
 **Description:** Add a new link.
 
@@ -41,7 +41,7 @@
 - `400 Bad Request`: Please provide all required fields.
 - `409 Conflict`: Link with the same name or URL already exists.
 
-#### DELETE /api/v1/linkmaster/:linkId
+#### `DELETE` /api/v1/linkmaster/:linkId
 
 **Description:** Remove a link by ID.
 
@@ -58,7 +58,7 @@
 **Errors:**
 - `404 Not Found`: Link not found.
 
-#### PATCH /api/v1/linkmaster/changestatus/:linkId
+#### `PATCH` /api/v1/linkmaster/changestatus/:linkId
 
 **Description:** Toggle the activation status of a link by ID.
 
@@ -85,7 +85,7 @@
 
 ### User Endpoints
 
-#### POST /api/v1/user/register
+#### `POST` /api/v1/user/register
 
 **Description:** Register a new user.
 
@@ -129,7 +129,7 @@
 - `409 Conflict`: User already exists.
 - `500 Internal Server Error`: Failed to create user.
 
-#### POST /api/v1/user/login
+#### `POST` /api/v1/user/login
 
 **Description:** Log in a user.
 
@@ -184,7 +184,7 @@
 - `404 Not Found`: User not found.
 - `401 Unauthorized`: Incorrect password.
 
-#### POST /api/v1/user/logout
+#### `POST` /api/v1/user/logout
 
 **Description:** Log out a user.
 
@@ -203,7 +203,7 @@
 
 ### Admin Endpoints
 
-#### POST /api/v1/admin/register
+#### `POST` /api/v1/admin/register
 
 **Description:** Register a new admin.
 
@@ -238,7 +238,7 @@
 - `400 Bad Request`: Please provide all required fields.
 - `409 Conflict`: Admin already exists.
 
-#### POST /api/v1/admin/login
+#### `POST` /api/v1/admin/login
 
 **Description:** Login as admin.
 
@@ -271,7 +271,7 @@
 - `404 Not Found`: Admin not found.
 - `401 Unauthorized`: Invalid credentials.
 
-#### POST /api/v1/admin/logout
+#### `POST` /api/v1/admin/logout
 
 **Description:** Logout as admin.
 
@@ -288,7 +288,7 @@
 **Errors:**
 - `401 Unauthorized`: Access Token Required.
 
-#### POST /api/v1/admin/sub-admins
+#### `POST` /api/v1/admin/sub-admins
 
 **Description:** Get all sub-admins.
 
@@ -314,7 +314,7 @@
 **Errors:**
 - `401 Unauthorized`: Access Token Required.
 
-#### POST /api/v1/admin/sub-admins/create
+#### `POST` /api/v1/admin/sub-admins/create
 
 **Description:** Create a new sub-admin.
 
@@ -348,7 +348,7 @@
 **Errors:**
 - `409 Conflict`: SubAdmin already exists.
 
-#### DELETE /api/v1/admin/sub-admins/{id}
+#### `DELETE` /api/v1/admin/sub-admins/{id}
 
 **Description:** Remove a sub-admin.
 
@@ -368,7 +368,7 @@
 **Errors:**
 - `404 Not Found`: SubAdmin not found.
 
-#### PATCH /api/v1/admin/sub-admins/{id}/password
+#### `PATCH` /api/v1/admin/sub-admins/{id}/password
 
 **Description:** Update sub-admin password.
 
@@ -394,7 +394,7 @@
 
 ### SubAdmin Endpoints
 
-#### POST /api/v1/sadmin/login
+#### `POST` /api/v1/sadmin/login
 
 **Description:** Login as sub-admin.
 
@@ -427,7 +427,7 @@
 - `404 Not Found`: SubAdmin not found.
 - `401 Unauthorized`: Invalid credentials.
 
-#### POST /api/v1/sadmin/logout
+#### `POST` /api/v1/sadmin/logout
 
 **Description:** Logout as sub-admin.
 
