@@ -443,3 +443,38 @@
 
 **Errors:**
 - `401 Unauthorized`: Access Token Required.
+
+### Project Endpoints
+
+#### `POST` /api/v1/projects/create
+
+**Description:** Create a new project.
+
+**Request Body:**
+- `title` (String, required): The title of the project.
+- `description` (String, required): The description of the project.
+- `difficulty` (String, required): The difficulty level of the project. Possible values: "Beginner", "Intermediate", "Advanced".
+- `recommendedFor` (String, required): The recommended user type for the project. Possible values: "School Student", "College Student".
+- `category` (String, required): The category of the project.
+- `thumbnail` (File, optional): The thumbnail image file for the project.
+- `videoLink` (File, optional): The video file for the project.
+- `kitIncluded` (Boolean, optional): Whether the project includes a kit. Default is `false`.
+- `kitDetails` (String, optional): Details about the kit.
+- `prerequisites` (Array of Strings, optional): Prerequisites for the project.
+- `additionalResources` (Array of Objects, optional): Additional resources for the project.
+- `tags` (Array of Strings, optional): Tags for the project.
+- `steps` (Array of Objects, optional): Steps for the project.
+
+**Response:**
+- `201 Created`: Project created successfully.
+  ```json
+  {
+    "status": 201,
+    "data": {
+      // ...project data...
+    },
+    "message": "Project created successfully"
+  }
+  ```
+
+**Errors:**
